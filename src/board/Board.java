@@ -1,5 +1,10 @@
 package board;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileDescriptor;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+
 public class Board {
 	
 	
@@ -59,7 +64,11 @@ public class Board {
 		this.tokens[y][x] = token;
 	}
 	
-	public void printBoard() {
+	public String printBoard() {
+		
+		ByteArrayOutputStream out = new ByteArrayOutputStream();
+		System.setOut(new PrintStream(out));
+		
 		for(int i=0;i<5;i++) {
 			System.out.print("|");
 			for(int j=0;j<5;j++) {
@@ -75,8 +84,12 @@ public class Board {
 					System.out.print(tokens[i][j] +"|");
 				}
 			}
-			System.out.println("");
+		System.out.println("");
 		}
+		
+		System.setOut(new PrintStream(new FileOutputStream(FileDescriptor.out)));
+		
+		 return out.toString();
 	}
 	
 	public Laser getLaser() {

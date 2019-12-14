@@ -43,15 +43,17 @@ public class Checkpoint extends Token {
 			}else
 				break;
 			
-	
-			if(x > 4 || x < 0 || y > 4 || y < 0) 
+			if(x > 4 || x < 0 || y > 4 || y < 0) {
+				
 				break;
-			
+			}
 			
 			if(tokens[y][x] == null)
 				tokens[y][x] = new Beam();
 			
+			
 			else {
+		
 				tokens[y][x].setHit(true);
 				tokens[y][x].setInDir(outDir);
 				tokens[y][x].hit(tokens);
