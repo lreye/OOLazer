@@ -32,11 +32,11 @@ public class DoubleMirror extends Token{
 				outDir = Direction.W;
 			}
 			else if((initialD == Direction.N || initialD == Direction.S) && (inDir == Direction.E)  ) {
-				y++;
+				y--;
 				outDir = Direction.N;
 			}
 			else if((initialD == Direction.N || initialD == Direction.S) && (inDir == Direction.W)  ) {
-				y--;
+				y++;
 				outDir = Direction.S;
 			}
 			
@@ -50,11 +50,11 @@ public class DoubleMirror extends Token{
 				outDir = Direction.E;
 			}
 			else if((initialD == Direction.W || initialD == Direction.E) && (inDir == Direction.E)  ) {
-				y--;
+				y++;
 				outDir = Direction.S;
 			}
 			else if((initialD == Direction.W || initialD == Direction.E) && (inDir == Direction.W)  ) {
-				y++;
+				y--;
 				outDir = Direction.N;
 			}
 	

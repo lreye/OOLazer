@@ -3,8 +3,8 @@ package board;
 public class Board {
 	
 	
-	private Laser laser;// = new Laser(Direction.S);
-	private Token tokens[][];// = new Token[5][5];
+	private Laser laser;
+	public Token tokens[][];
 	
 	
 	
@@ -15,25 +15,7 @@ public class Board {
 	
 	
 	public void draw() {
-		//Dont forget to assign x y to actual token as well
-		/**DoubleMirror m = new DoubleMirror(Direction.N,2,3);
-		Mirror t = new Mirror(Direction.S,0,3);
-		Mirror t1 = new Mirror(Direction.W,0,1);
-		Checkpoint p  = new Checkpoint(Direction.E,1,1);
-		Target z = new Target(Direction.W,4,1);
-		BeamSplitter b = new BeamSplitter(Direction.E,3,1);
-		
-		tokens[3][2] = m;
-		tokens[1][0] = t1;
-		tokens[3][0] = t;
-		tokens[1][4] = z;
-		tokens[1][1] = p;
-		tokens[1][3] = b;
-		
-		*/
-		//laser.setX(2);
-		//laser.setY(2);
-		//tokens[2][2] = laser;
+
 		int x = getLaser().getX();
 		int y = getLaser().getY();
 		Direction initialD = getLaser().getDir();

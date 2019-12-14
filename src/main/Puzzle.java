@@ -149,9 +149,6 @@ public class Puzzle {
 					tokens[j][i1%5] = k2;
 				}
 			}
-				
-			
-			System.out.println(tokens[j][i1%5] + " y=" + j + " x=" + i1%5);
 			
 			
 			if(i == 8 || i == 18 || i == 28 || i == 38)
@@ -161,6 +158,7 @@ public class Puzzle {
 		}
 		
 		
+		System.out.println("\n");
 		
 		return new Board(laser, tokens);
 		
